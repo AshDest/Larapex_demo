@@ -61,9 +61,15 @@ class TestChart extends Component
             ->addData('San Francisco', [6, 9, 3, 4, 10, 8])
             ->addData('Boston', [7, 3, 8, 2, 6, 4])
             ->setXAxis(['January', 'February', 'March', 'April', 'May', 'June']);
+        $chart10 = LarapexChart::heatMapChart()
+            ->setTitle('Basic radar chart')
+            ->addData('Sales', [80, 50, 30, 40, 100, 20])
+            ->addHeat('Income', [70, 10, 80, 20, 60, 40])
+            ->setMarkers(['#FFA41B', '#4F46E5'], 7, 10)
+            ->setXAxis(['January', 'February', 'March', 'April', 'May', 'June']);
         return view(
             'livewire.test-chart',
-            compact('chart', 'chart2', 'chart3', 'chart4', 'chart5', 'chart6', 'chart7', 'chart8', 'chart9')
+            compact('chart', 'chart2', 'chart3', 'chart4', 'chart5', 'chart6', 'chart7', 'chart8', 'chart9', 'chart10')
         );
     }
 }
