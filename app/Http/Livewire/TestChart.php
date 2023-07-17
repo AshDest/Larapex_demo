@@ -9,11 +9,11 @@ class TestChart extends Component
 {
     public function render()
     {
-        $chart = LarapexChart::lineChart()
-            ->setTitle('Test Chart')
-            ->addData('Test 1', [40, 50, 30, 60, 50, 70, 40])
-            ->addData('Test 2', [10, 30, 40, 50, 20, 80, 10])
-            ->setXAxis(['Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']);
+        $chart = LarapexChart::pieChart()
+            ->setTitle('Top 3 scorers of the team.')
+            ->setSubtitle('Season 2021.')
+            ->addData([40, 50, 30])
+            ->setLabels(['Player 7', 'Player 10', 'Player 9']);
         return view('livewire.test-chart', compact('chart'));
     }
 }
