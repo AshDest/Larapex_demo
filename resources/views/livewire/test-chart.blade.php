@@ -41,5 +41,10 @@
                 <script src="{{ $chart8->cdn() }}"></script>
                 {{ $chart8->script() }}
             </div>
+            <div class="col-lg-6">
+                {!! $chart9->container() !!}
+                <script src="{{ $chart9->cdn() }}"></script>
+                {{ $chart9->script() }}
+            </div>
         </div>
     </div>

@@ -54,6 +54,16 @@ class TestChart extends Component
             ->setSubtitle('Season 2021.')
             ->addData([20, 24, 30])
             ->setLabels(['Player 7', 'Player 10', 'Player 9']);
-        return view('livewire.test-chart', compact('chart', 'chart2', 'chart3', 'chart4', 'chart5', 'chart6', 'chart7', 'chart8'));
+        $chart9 = LarapexChart::horizontalBarChart()
+            ->setTitle('Los Angeles vs Miami.')
+            ->setSubtitle('Wins during season 2021.')
+            ->setColors(['#FFC107', '#D32F2F'])
+            ->addData('San Francisco', [6, 9, 3, 4, 10, 8])
+            ->addData('Boston', [7, 3, 8, 2, 6, 4])
+            ->setXAxis(['January', 'February', 'March', 'April', 'May', 'June']);
+        return view(
+            'livewire.test-chart',
+            compact('chart', 'chart2', 'chart3', 'chart4', 'chart5', 'chart6', 'chart7', 'chart8', 'chart9')
+        );
     }
 }
