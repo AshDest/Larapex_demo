@@ -65,4 +65,4 @@ php artisan serve
 
 Image 1: Chart with data
 
-![public\images\img_1.png]("public\images\img_1.png")
+![Image of Chart with data](public\images\img_1.png)
