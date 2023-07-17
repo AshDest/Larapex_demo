@@ -25,6 +25,18 @@ class TestChart extends Component
             ->setSubtitle('Season 2021.')
             ->addData([20, 24, 30])
             ->setLabels(['Player 7', 'Player 10', 'Player 9']);
-        return view('livewire.test-chart', compact('chart', 'chart2', 'chart3'));
+        $chart4 = LarapexChart::radarChart()
+            ->setTitle('Individual Player Stats.')
+            ->setSubtitle('Season 2021.')
+            ->addData('Stats', [70, 93, 78, 97, 50, 90])
+            ->setXAxis(['Pass', 'Dribble', 'Shot', 'Stamina', 'Long shots', 'Tactical'])
+            ->setMarkers(['#303F9F'], 7, 10);
+        $chart5 = LarapexChart::barChart()
+            ->setTitle('San Francisco vs Boston.')
+            ->setSubtitle('Wins during season 2021.')
+            ->addData('San Francisco', [6, 9, 3, 4, 10, 8])
+            ->addData('Boston', [7, 3, 8, 2, 6, 4])
+            ->setXAxis(['January', 'February', 'March', 'April', 'May', 'June']);
+        return view('livewire.test-chart', compact('chart', 'chart2', 'chart3', 'chart4', 'chart5'));
     }
 }
