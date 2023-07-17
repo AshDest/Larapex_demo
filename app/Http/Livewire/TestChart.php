@@ -20,6 +20,11 @@ class TestChart extends Component
             ->setSubtitle('Season 2021.')
             ->addData([20, 24, 30])
             ->setLabels(['Player 7', 'Player 10', 'Player 9']);
-        return view('livewire.test-chart', compact('chart', 'chart2'));
+        $chart3 = LarapexChart::radialChart()
+            ->setTitle('Top 3 scorers of the team.')
+            ->setSubtitle('Season 2021.')
+            ->addData([20, 24, 30])
+            ->setLabels(['Player 7', 'Player 10', 'Player 9']);
+        return view('livewire.test-chart', compact('chart', 'chart2', 'chart3'));
     }
 }
