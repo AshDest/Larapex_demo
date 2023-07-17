@@ -60,3 +60,9 @@ Then start the server
 ```
 php artisan serve
 ```
+
+## Output of Application
+
+Image 1: Chart with data
+
+![public\images\img_1.png]("public\images\img_1.png")
