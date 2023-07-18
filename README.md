@@ -2,6 +2,8 @@
 
 This is a small Laravel application, using Larapex Charts with Livewire. It is a simple application that shows the number of users registered in the last 7 days.
 
+for more information on Larapex Charts, visit [Larapex Charts](https://larapex-charts.netlify.app/) and for more information on Livewire, visit [Livewire](https://laravel-livewire.com/)
+
 ## Packages Used
 
 To install the packages used in this application, run the following command-
