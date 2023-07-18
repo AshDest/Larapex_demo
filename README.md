@@ -2,6 +2,20 @@
 
 This is a small Laravel application, using Larapex Charts with Livewire. It is a simple application that shows the number of users registered in the last 7 days.
 
+## Packages Used
+
+To install the packages used in this application, run the following command-
+
+```
+composer require arielmejiadev/larapex-charts
+```
+
+publish the config file with the following command-
+
+```
+php artisan vendor:publish --tag=larapex-charts-config
+```
+
 ## Installation
 
 Clone the repository-
