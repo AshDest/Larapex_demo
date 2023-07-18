@@ -20,9 +20,12 @@ class TestWithDb extends Component
             $data['labels'][] = date('M', mktime(0, 0, 0, $product->month, 1));
         }
 
-        foreach ($data['data'] as $item) {
+        // $combined = array_combine($data['data'], $data['produit']);
+        // dd($combined);
+
+        foreach ($data['data'] as $item => $value) {
             $dataset[] = [
-                'data' => $item
+                'data' => $value
             ];
         }
 
