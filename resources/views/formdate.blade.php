@@ -14,10 +14,9 @@
                             </div>
                         @endif
 
-                        {{ __('You are logged in!') }}
-                        @livewire('test-chart')
+                        {{ __('Second Chart!') }}
+                        @livewire('test-with-db')
                     </div>
-                    <a href="{{ route('test') }}">From Database</a>
                 </div>
             </div>
         </div>
