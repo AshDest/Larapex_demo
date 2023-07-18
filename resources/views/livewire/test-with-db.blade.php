@@ -1,3 +1,11 @@
 <div>
-    {{-- The Master doesn't talk, he acts. --}}
+    <div class="col-lg-12">
+        <div class="row">
+            <div class="col-lg-6">
+                {!! $chart->container() !!}
+                <script src="{{ $chart->cdn() }}"></script>
+                {{ $chart->script() }}
+            </div>
+        </div>
+    </div>
 </div>

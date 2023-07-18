@@ -7,6 +7,7 @@
                 <div class="card">
                     <div class="card-header">{{ __('Dashboard') }}</div>
 
+                    <a class=" btn btn-success" href="{{ route('test') }}">From Database</a>
                     <div class="card-body">
                         @if (session('status'))
                             <div class="alert alert-success" role="alert">
@@ -17,7 +18,6 @@
                         {{ __('You are logged in!') }}
                         @livewire('test-chart')
                     </div>
-                    <a href="{{ route('test') }}">From Database</a>
                 </div>
             </div>
         </div>
