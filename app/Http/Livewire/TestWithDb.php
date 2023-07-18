@@ -10,17 +10,19 @@ class TestWithDb extends Component
 {
     public function render()
     {
-        $products = Vente::select('produit')->get();
-        $values = Vente::select('prix')->get();
-        $prod[] = $products->pluck('produit');
-        $price[] = $values->pluck('prix');
-        // dd($date);
-        // $values =
+        $products = Vente::selectRaw('MONTH(date) as month, SUM(prix) as total')
+            ->groupBy('month')
+            ->get();
+        $data = [];
+        foreach ($products as $product) {
+            $data['data'][] = $product->total;
+            $data['labels'][] = date('M', mktime(0, 0, 0, $product->month, 1));
+        }
         $chart = LarapexChart::pieChart()
             ->setTitle('Top Scrore des ventes')
             ->setSubtitle('Season 2021.')
-            ->addData([$price])
-            ->setLabels([$prod]);
+            ->addData($data['data'])
+            ->setLabels($data['labels']);
         return view('livewire.test-with-db', compact('chart'));
     }
 }
