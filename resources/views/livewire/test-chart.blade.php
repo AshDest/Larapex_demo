@@ -52,4 +52,5 @@
                 {{ $chart10->script() }}
             </div>
         </div>
+        {{-- NOTRE TEST --}}
     </div>
