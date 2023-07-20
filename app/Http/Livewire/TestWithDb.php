@@ -19,21 +19,11 @@ class TestWithDb extends Component
             $data['data'][] = $product->total;
             $data['labels'][] = date('M', mktime(0, 0, 0, $product->month, 1));
         }
-
-        // $combined = array_combine($data['data'], $data['produit']);
-        // dd($combined);
-
         foreach ($data['data'] as $item => $value) {
             $dataset[] = [
                 'data' => $value
             ];
         }
-
-        // $dataset[] = [
-        //     'name' => $data['produit'],
-        //     'data' => $data['data']
-        // ];
-
         dd($dataset);
         $chart = LarapexChart::lineChart()
             ->setTitle('Sales during 2021.')
@@ -42,11 +32,6 @@ class TestWithDb extends Component
                 [$dataset]
             )
             ->setXAxis($data['labels']);
-        // $chart = LarapexChart::pieChart()
-        //     ->setTitle('Top Scrore des ventes')
-        //     ->setSubtitle('Season 2021.')
-        //     ->addData($data['data'])
-        //     ->setLabels($data['labels']);
         return view('livewire.test-with-db', compact('chart'));
     }
 }
